@@ -7,8 +7,8 @@ const email = `member${Math.random().toString().substring(12)}@gmail.com`;
 
 describe('POST /v1/auth/register', () => {
   it('should response with 201 as status code', async () => {
-    const name = 'Hello';
-    const password = '123';
+    const name = 'User1';
+    const password = '12345';
 
     return request(app)
       .post('/v1/auth/register')
@@ -25,8 +25,8 @@ describe('POST /v1/auth/register', () => {
   });
 
   it('should response with 422 as status code', async () => {
-    const name = 'Member';
-    const password = '123';
+    const name = 'User2';
+    const password = '12345';
 
     return request(app)
       .post('/v1/auth/register')

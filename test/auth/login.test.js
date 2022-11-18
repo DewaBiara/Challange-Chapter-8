@@ -5,8 +5,8 @@ const request = require('supertest');
 const app = require('../../app/index');
 
 describe('POST /v1/auth/login', () => {
-  const email = 'firman@gmail.com';
-  const password = 'firman';
+  const email = 'dewabiara@gmail.com';
+  const password = 'dewabiara';
 
   it('should response with 201 as status code', async () => {
     return request(app)

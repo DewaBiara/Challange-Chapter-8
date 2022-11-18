@@ -16,13 +16,13 @@ describe('POST /v1/cars/:id/rent', () => {
 
   beforeAll(async () => {
     accessTokenAdmin = await request(app).post('/v1/auth/login').send({
-      email: 'firman@gmail.com',
-      password: 'firman',
+      email: 'dewabiara@gmail.com',
+      password: 'dewabiara',
     });
 
     accessTokenCustomer = await request(app).post('/v1/auth/login').send({
-      email: 'hendri@gmail.com',
-      password: 'hendri',
+      email: 'dewabiara2@gmail.com',
+      password: 'dewabiara2',
     });
 
     car = await request(app)
@@ -30,8 +30,8 @@ describe('POST /v1/cars/:id/rent', () => {
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${accessTokenAdmin.body.accessToken}`)
       .send({
-        name: 'Volvo 142E',
-        price: 300000,
+        name: 'Cadillac Fleetwood',
+        price: 400000,
         size: 'LARGE',
         image: 'https://source.unsplash.com/531x531',
       });

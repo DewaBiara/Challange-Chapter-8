@@ -10,13 +10,13 @@ describe('DELETE /v1/cars/:id', () => {
 
   beforeEach(async () => {
     accessTokenAdmin = await request(app).post('/v1/auth/login').send({
-      email: 'firman@gmail.com',
-      password: 'firman',
+      email: 'dewabiara@gmail.com',
+      password: 'dewabiara',
     });
 
     accessTokenCustomer = await request(app).post('/v1/auth/login').send({
-      email: 'hendri@gmail.com',
-      password: 'hendri',
+      email: 'dewabiara2@gmail.com',
+      password: 'dewabiara2',
     });
 
     car = await request(app)
@@ -24,9 +24,9 @@ describe('DELETE /v1/cars/:id', () => {
       .set('Content-Type', 'application/json')
       .set('Authorization', `Bearer ${accessTokenAdmin.body.accessToken}`)
       .send({
-        name: 'Ferrari Delete',
-        price: 1000000,
-        size: 'MEDIUM',
+        name: 'Mazda RX7',
+        price: 3000000,
+        size: 'SMALL',
         image: 'https://source.unsplash.com/500x500',
       });
 

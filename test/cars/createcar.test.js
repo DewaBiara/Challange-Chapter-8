@@ -4,16 +4,16 @@
 const request = require('supertest');
 const app = require('../../app/index');
 
-const name = 'BMW Test';
-const price = 100000;
+const name = 'Mazda RX7';
+const price = 200000;
 const size = 'SMALL';
 const image = 'https://source.unsplash.com/500x500';
 
 describe('POST /v1/create', () => {
   it('should response with 201 as status code', async () => {
     const accessToken = await request(app).post('/v1/auth/login').send({
-      email: 'firman@gmail.com',
-      password: 'firman',
+      email: 'dewabiara@gmail.com',
+      password: 'dewabiara',
     });
 
     return request(app)
@@ -30,8 +30,8 @@ describe('POST /v1/create', () => {
 
   it('should response with 401 as status code', async () => {
     const accessToken = await request(app).post('/v1/auth/login').send({
-      email: 'hendri@gmail.com',
-      password: 'hendri',
+      email: 'dewabiara@gmail.com',
+      password: 'dewabiara',
     });
 
     return request(app)

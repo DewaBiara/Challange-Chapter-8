@@ -7,8 +7,8 @@ const app = require('../../app/index');
 describe('GET /v1/auth/whoami', () => {
   it('should response with 200 as status code', async () => {
     const accessToken = await request(app).post('/v1/auth/login').send({
-      email: 'firman@gmail.com',
-      password: 'firman',
+      email: 'dewabiara@gmail.com',
+      password: 'dewabiara',
     });
 
     return request(app)

@@ -8,19 +8,19 @@ const app = require('../../app/index');
 describe('PUT /v1/cars/:id', () => {
   let car, accessTokenAdmin, accessTokenCustomer;
 
-  const name = 'Ferrari Update';
-  const price = 100000;
+  const name = 'Mazda RX7';
+  const price = 300000;
   const size = 'SMALL';
   const image = 'https://source.unsplash.com/500x500';
 
   beforeEach(async () => {
     accessTokenAdmin = await request(app).post('/v1/auth/login').send({
-      email: 'firman@gmail.com',
-      password: 'firman',
+      email: 'dewabiara@gmail.com',
+      password: 'dewabiara',
     });
     accessTokenCustomer = await request(app).post('/v1/auth/login').send({
-      email: 'hendri@gmail.com',
-      password: 'hendri',
+      email: 'dewabiara2@gmail.com',
+      password: 'dewabiara2',
     });
 
     car = await request(app)
